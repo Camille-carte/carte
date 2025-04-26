@@ -4,6 +4,32 @@ var map = L.map('map', {
   maxZoom: 16,
 }).setView([48.8566, 2.3522], 12); // Centré sur Paris
 
+const categoryColors = {
+  bidonville: '#cc4c4c',
+  usine: '#2e86ab',
+  a: '#8e44ad',
+  a: '#7f8c8d'
+};
+
+function createMarker(feature, latlng) {
+  const cat = feature.properties.category;
+  const color = categoryColors[cat] || '#555';
+  const marker = L.circleMarker(latlng, {
+    radius: 8,
+    fillColor: color,
+    color: '#fff',
+    weight: 1,
+    fillOpacity: 0.8
+  });
+  marker.bindPopup(`
+    <strong>${feature.properties.title}</strong><br/>
+    <audio controls src="${feature.properties.audio}" style="width:100%"></audio>
+    <p style="margin-top: 0.5em">${feature.properties.text}</p>
+  `);
+  return marker;
+}
+
+    
 // Ajout d'un fond de carte OpenStreetMap
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; Stadia Maps, &copy; OpenMapTiles &copy; OpenStreetMap contributors'
