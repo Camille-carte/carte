@@ -6,10 +6,8 @@
       "geometry": {"type": "Point", "coordinates": [2.23, 48.91]},
       "properties": {
         "title": "Bidonville de Nanterre",
-        "typologie": "Bidonville",
-        "periode": "1953–1972",
-        "cause": "Urbanisme hygiéniste, politique migratoire",
-        "etat": "Logements sociaux",
+        "category": "Bidonville","1953–1972"
+        "actuelement": "Logements sociaux",
         "audio": "https://drive.google.com/file/d/1v2Wri_P0bsAe9IeEa0CICzbKelnm-l2a/view?usp=drive_link",
         "text": "Ensemble de bidonvilles dans  lequel vivaient plus de 10 mille personnes venues majoritairement d'Algérie, mais aussi du Maroc et du Portugal"
       }
