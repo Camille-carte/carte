@@ -5,8 +5,8 @@ var map = L.map('map', {
 }).setView([48.8566, 2.3522], 12); // Centré sur Paris
 
 // Ajout d'un fond de carte OpenStreetMap
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap'
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; Stadia Maps, &copy; OpenMapTiles &copy; OpenStreetMap contributors'
 }).addTo(map);
 
 // Ajout des limites du Grand Paris pour ne pas dézoomer à l'infini
