@@ -4,9 +4,9 @@ var map = L.map('map', {
   maxZoom: 16
 }).setView([48.8566, 2.3522], 12);
 
-// Fond de carte OpenStreetMap compatible GitHub Pages
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
+// Fond de carte sombre, style blueprint
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap & CartoDB'
 }).addTo(map);
 
 // Limiter le déplacement hors Grand Paris
@@ -15,11 +15,8 @@ map.setMaxBounds([
   [49.2, 3.4]
 ]);
 
-// Stocker les marqueurs
 var allMarkers = [];
 var layerGroup = L.layerGroup().addTo(map);
-
-// Lecture audio
 var currentAudio = null;
 
 // Charger le GeoJSON
@@ -28,14 +25,22 @@ fetch('data/lieux.geojson')
   .then(data => {
     data.features.forEach(feature => {
       var props = feature.properties;
-      var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-      marker.bindPopup(`<h3>${props.title}</h3><p>${props.text}</p>`);
+      var marker = L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
+        radius: 6,
+        color: 'white',
+        fillColor: 'white',
+        fillOpacity: 1
+      });
       marker.on('click', function() {
-        if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio = null;
+        }
         if (props.audio) {
           currentAudio = new Audio(props.audio);
           currentAudio.play();
         }
+        document.getElementById('info-text').innerHTML = `<h3>${props.title}</h3><p>${props.text}</p>`;
       });
       marker.feature = props;
       marker.addTo(layerGroup);
@@ -47,24 +52,6 @@ fetch('data/lieux.geojson')
 
 // Créer les filtres croiser
 function createFilters() {
-  const filterContainer = L.control({ position: 'topright' });
-
-  filterContainer.onAdd = function() {
-    const div = L.DomUtil.create('div', 'filter-container');
-    div.innerHTML = `
-      <h4>Filtres</h4>
-      <label>Typologie</label><input id="typologie" type="text" placeholder="Ex: Bidonville">
-      <label>Période</label><input id="periode" type="text" placeholder="Ex: 1960-1980">
-      <label>Cause</label><input id="cause" type="text" placeholder="Ex: Gentrification">
-      <label>Devenu</label><input id="etat" type="text" placeholder="Ex: Ecoquartier">
-      <button id="apply">Appliquer</button>
-      <button id="reset">Reset</button>
-    `;
-    return div;
-  };
-
-  filterContainer.addTo(map);
-
   document.getElementById('apply').onclick = function() {
     var typologie = document.getElementById('typologie').value.toLowerCase();
     var periode = document.getElementById('periode').value.toLowerCase();
