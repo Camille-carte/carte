@@ -1,40 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Ce qu'on n'entend plus</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-  <style>
-    body, html { margin: 0; padding: 0; height: 100%; font-family: Arial, sans-serif; }
-    #map { position: absolute; top: 60px; bottom: 0; width: 100%; }
-    #title { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(255,255,255,0.7); padding: 8px 20px; border-radius: 12px; font-size: 22px; }
-    #legend { position: absolute; top: 70px; left: 10px; z-index: 1000; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; max-width: 300px; }
-    #legend-content { display: none; margin-top: 10px; }
-    #toggle-legend { width: 100%; background-color: #0078A8; color: white; border: none; padding: 8px; border-radius: 6px; cursor: pointer; font-weight: bold; }
-    #map::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(100,150,255,0.1); mix-blend-mode: multiply; pointer-events: none; z-index: 400; }
-  </style>
 </head>
 <body>
   <h1 id="title">Ce qu'on n'entend plus</h1>
-  
+
   <div id="map"></div>
 
   <div id="legend">
     <button id="toggle-legend">Afficher / Masquer la légende</button>
     <div id="legend-content">
-      <h2>Ce qu’on n’entend plus (1959–2025) : cartographie des sons effacés du Grand Paris</h2>
-      <p>Cette carte propose une lecture du Grand Paris à travers les sons disparus entre 1959 et 2025. Elle s’intéresse aux paysages sonores effacés ou transformés, envisagés comme témoins des mutations sociales, politiques et spatiales. Ces sons ont peu à peu quitté l’espace urbain, emportés par des processus d’effacement volontaire, de reconfiguration spatiale ou de mise au silence normative. La ville n’est pas seulement ce que l’on voit. C’est aussi ce que l’on entend, ou ce que l’on n’entend plus.</p>
-      <p>En sélectionnant des lieux précis, la carte explore la dimension politique du sonore : ce que l’on est autorisé à entendre, ce qui doit être tu, ce qui devient inaudible. Chaque point de la carte donne accès à un extrait sonore accompagné d’un texte bref, contextualisant la disparition, les logiques à l’œuvre, et la situation actuelle du lieu. Ces fragments doivent être entendus non comme des objets de nostalgie, mais comme des traces, comme un vecteur de mémoire, d’existence sociale.</p>
-      <p>Le silence qui les remplace s’inscrit dans l’avènement d’un idéal urbain pacifié, une ville contrôlée, propre, tranquille, qui exclut ce qui déborde, dérange.</p>
-      <p>Cette cartographie n’est pas figée. Elle est pensée comme un support évolutif, susceptible d’être enrichi au fil du temps par d’autres sons effacés, d’autres récits, d’autres lieux. Elle invite à poursuivre l’enquête, à écouter autrement, à documenter ce qui disparaît encore.</p>
+      <h2>Ce qu'on n'entend plus (1959–2025) : cartographie des sons effacés du Grand Paris</h2>
+      <p>Cette carte propose une lecture du Grand Paris à travers les sons disparus entre 1959 et 2025. Elle s’intéresse aux paysages sonores effacés ou transformés, envisagés comme témoins des mutations sociales, politiques et spatiales. La ville n’est pas seulement ce que l'on voit, c'est aussi ce que l'on entend, ou ce que l'on n'entend plus.</p>
+      <p>Chaque point donne accès à un extrait sonore et à un texte bref contextualisant la disparition, les logiques à l'œuvre, et la situation actuelle du lieu. Ces fragments doivent être entendus non comme des objets de nostalgie, mais comme des traces, des vecteurs de mémoire et d'existence sociale.</p>
+      <p>Cette cartographie est pensée comme évolutive, appelant à documenter ce qui disparaît encore.</p>
     </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="script.js"></script>
+
   <script>
     document.getElementById('toggle-legend').onclick = function() {
       const content = document.getElementById('legend-content');
