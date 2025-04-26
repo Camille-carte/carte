@@ -8,7 +8,9 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: 0;
+  filter: hue-rotate(190deg) brightness(0.7) saturate(2);
 }
+
 #filters {
   position: absolute;
   top: 15px;
