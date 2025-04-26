@@ -2,70 +2,50 @@
 var map = L.map('map', {
   minZoom: 11,
   maxZoom: 16,
-}).setView([48.8566, 2.3522], 12); // Centré sur Paris
+}).setView([48.8566, 2.3522], 12);
 
-const categoryColors = {
-  bidonville: '#cc4c4c',
-  usine: '#2e86ab',
-  a: '#8e44ad',
-  a: '#7f8c8d'
-};
-
-function createMarker(feature, latlng) {
-  const cat = feature.properties.category;
-  const color = categoryColors[cat] || '#555';
-  const marker = L.circleMarker(latlng, {
-    radius: 8,
-    fillColor: color,
-    color: '#fff',
-    weight: 1,
-    fillOpacity: 0.8
-  });
-  marker.bindPopup(`
-    <strong>${feature.properties.title}</strong><br/>
-    <audio controls src="${feature.properties.audio}" style="width:100%"></audio>
-    <p style="margin-top: 0.5em">${feature.properties.text}</p>
-  `);
-  return marker;
-}
-
-    
-// Ajout d'un fond de carte OpenStreetMap
+// Fond de carte blueprint style
 L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
   attribution: '&copy; Stamen Design, &copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Ajout des limites du Grand Paris pour ne pas dézoomer à l'infini
+// Limiter le déplacement hors Grand Paris
 map.setMaxBounds([
-  [48.5, 1.8], // Sud-Ouest
-  [49.2, 3.4]  // Nord-Est
+  [48.5, 1.8],
+  [49.2, 3.4]
 ]);
 
-// Création des groupes de filtres
+// Stocker les marqueurs
 var allMarkers = [];
 var layerGroup = L.layerGroup().addTo(map);
 
-// Chargement du GeoJSON
+// Lecture audio
+var currentAudio = null;
+
+// Charger le GeoJSON
 fetch('data/lieux.geojson')
   .then(response => response.json())
   .then(data => {
     data.features.forEach(feature => {
       var props = feature.properties;
       var marker = L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-      marker.bindPopup(
-        `<h3>${props.title}</h3>
-         <p>${props.text}</p>
-         ${props.audio ? `<audio controls autoplay src="${props.audio}"></audio>` : ''}`
-      );
-      marker.feature = props; // Ajout des propriétés pour filtrer ensuite
+      marker.bindPopup(`<h3>${props.title}</h3><p>${props.text}</p>`);
+      marker.on('click', function() {
+        if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+        if (props.audio) {
+          currentAudio = new Audio(props.audio);
+          currentAudio.play();
+        }
+      });
+      marker.feature = props;
       marker.addTo(layerGroup);
       allMarkers.push(marker);
     });
 
-    // Génération automatique des filtres
     createFilters();
   });
 
+// Créer les filtres croiser
 function createFilters() {
   const filterContainer = L.control({ position: 'topright' });
 
@@ -74,9 +54,9 @@ function createFilters() {
     div.innerHTML = `
       <h4>Filtres</h4>
       <label>Typologie</label><input id="typologie" type="text" placeholder="Ex: Bidonville">
-      <label>Période</label><input id="periode" type="text" placeholder="Ex: 1960–1980">
+      <label>Période</label><input id="periode" type="text" placeholder="Ex: 1960-1980">
       <label>Cause</label><input id="cause" type="text" placeholder="Ex: Gentrification">
-      <label>Devenu</label><input id="etat" type="text" placeholder="Ex: Écoquartier">
+      <label>Devenu</label><input id="etat" type="text" placeholder="Ex: Ecoquartier">
       <button id="apply">Appliquer</button>
       <button id="reset">Reset</button>
     `;
