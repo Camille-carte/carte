@@ -1,10 +1,10 @@
 // Initialisation de la carte
 var map = L.map('map', {
   minZoom: 11,
-  maxZoom: 16,
+  maxZoom: 16
 }).setView([48.8566, 2.3522], 12);
 
-// Fond de carte OpenStreetMap simple
+// Fond de carte OpenStreetMap compatible GitHub Pages
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
