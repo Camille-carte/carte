@@ -9,28 +9,29 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 </head>
 <body>
-  <h1 id="title">Ce qu'on n'entend plus</h1>
 
-  <div id="map"></div>
+  <div id="main-container">
+    <div id="filters-panel">
+      <h2>Filtres</h2>
+      <input id="typologie" type="text" placeholder="Typologie">
+      <input id="periode" type="text" placeholder="Période">
+      <input id="cause" type="text" placeholder="Cause">
+      <input id="etat" type="text" placeholder="Devenu">
+      <button id="apply">Appliquer</button>
+      <button id="reset">Reset</button>
+    </div>
 
-  <div id="legend">
-    <button id="toggle-legend">Afficher / Masquer la légende</button>
-    <div id="legend-content">
-      <h2>Ce qu'on n'entend plus (1959–2025) : cartographie des sons effacés du Grand Paris</h2>
-      <p>Cette carte propose une lecture du Grand Paris à travers les sons disparus entre 1959 et 2025. Elle s’intéresse aux paysages sonores effacés ou transformés, envisagés comme témoins des mutations sociales, politiques et spatiales. La ville n’est pas seulement ce que l'on voit, c'est aussi ce que l'on entend, ou ce que l'on n'entend plus.</p>
-      <p>Chaque point donne accès à un extrait sonore et à un texte bref contextualisant la disparition, les logiques à l'œuvre, et la situation actuelle du lieu. Ces fragments doivent être entendus non comme des objets de nostalgie, mais comme des traces, des vecteurs de mémoire et d'existence sociale.</p>
-      <p>Cette cartographie est pensée comme évolutive, appelant à documenter ce qui disparaît encore.</p>
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="info-panel">
+        <h1>Ce qu'on n'entend plus</h1>
+        <div id="info-text"></div>
+      </div>
     </div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="script.js"></script>
 
-  <script>
-    document.getElementById('toggle-legend').onclick = function() {
-      const content = document.getElementById('legend-content');
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    };
-  </script>
 </body>
 </html>
