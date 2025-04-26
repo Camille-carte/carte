@@ -4,9 +4,9 @@ var map = L.map('map', {
   maxZoom: 16,
 }).setView([48.8566, 2.3522], 12);
 
-// Fond de carte blueprint style
-L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
-  attribution: '&copy; Stamen Design, &copy; OpenStreetMap contributors'
+// Fond de carte OpenStreetMap simple
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
 // Limiter le déplacement hors Grand Paris
