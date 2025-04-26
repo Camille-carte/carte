@@ -8,6 +8,9 @@ var map = L.map('map', {
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; Stadia Maps, &copy; OpenMapTiles &copy; OpenStreetMap contributors'
 }).addTo(map);
+#map {
+  filter: hue-rotate(200deg) brightness(0.8) saturate(0.5);
+}
 
 // Ajout des limites du Grand Paris pour ne pas dézoomer à l'infini
 map.setMaxBounds([
