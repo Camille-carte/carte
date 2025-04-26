@@ -1,0 +1,35 @@
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f6f6f6;
+}
+#map {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+#filters {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+#filters label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+.leaflet-popup-content {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #222;
+}
+.leaflet-popup-content audio {
+  margin-top: 5px;
+}
