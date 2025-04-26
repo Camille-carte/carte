@@ -1,0 +1,325 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Nanterre – Bidonville algérien",
+        "category": "migrant",
+        "audio": "https://www.histoire-immigration.fr/sites/default/files/musee-numerique/documents/bidonville_nanterre.pdf",
+        "text": "Discussions en arabe, chants, rires d’enfants dans le bidonville. Détruit dans les années 70, remplacé par des HLM."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2201,
+          48.9032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boulogne-Billancourt – Usines Renault",
+        "category": "industriel",
+        "audio": "https://www.cinearchives.org/catalogue-renault-fevrier-1950-1104-552-1-0.html",
+        "text": "Bruit des machines, sirènes, manifestations rythmaient la vie ouvrière. Fermeture des usines, site reconfiguré."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2382,
+          48.8309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Paris 1er – Les Halles",
+        "category": "ouvrier",
+        "audio": "https://artic.contentdm.oclc.org/digital/collection/mqc/id/64261",
+        "text": "Cœur du marché parisien : cris des marchands, activité 24h/24. Détruit en 1971, remplacé par le Forum des Halles."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3488,
+          48.861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ivry-sur-Seine – Cité Gagarine",
+        "category": "ouvrier",
+        "audio": "https://www.cinearchives.org/catalogue-visite-de-youri-gagarine-a-ivry-sur-seine-1104-1427-1-0.html",
+        "text": "Cris d’enfants, discussions de palier, vie collective. La cité a été démolie en 2019, remplacée par un écoquartier."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3926,
+          48.8062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Champigny-sur-Marne – Bidonville portugais",
+        "category": "migrant",
+        "audio": "https://www.ina.fr/ina-eclaire-actu/video/i20286395/le-bidonville-de-champigny-sur-marne",
+        "text": "Quartier vivant, saturé de musique et de voix. Urbanisé à partir des années 70, devenu un espace résidentiel."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5225,
+          48.8211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Paris 18e – Goutte d’Or",
+        "category": "migrant",
+        "audio": "https://www.youtube.com/watch?v=FqgMrZyKkGs",
+        "text": "Quartier populaire vibrant de musiques africaines, voix dans la rue, marchés animés. Ambiance sonore réduite."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3554,
+          48.8877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Place de la République – Campements migrants",
+        "category": "migrant",
+        "audio": "https://www.gettyimages.com/videos/migrants-camp-in-paris",
+        "text": "Sons des tentes, voix multiples, entraide temporaire. Évacuations successives, place rendue à ses usages normés."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.363,
+          48.867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bois de Vincennes – Exposition coloniale",
+        "category": "colonial",
+        "audio": "https://www.youtube.com/watch?v=bW-RaQmVWMc",
+        "text": "Pavillons coloniaux avec musiques mises en scène. Sons disparus, lieu redevenu espace vert."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.439,
+          48.833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Saint-Denis – Place du 8 mai",
+        "category": "ouvrier",
+        "audio": "https://archives.seinesaintdenis.fr/n/deposants/n%3A173",
+        "text": "Place de concerts, musiques urbaines, fêtes de quartier. Réaménagements liés aux JO, ambiance maîtrisée."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3626,
+          48.935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rue de Lappe – Paris 11e",
+        "category": "ouvrier",
+        "audio": "https://www.ina.fr/ina-eclaire-actu/video/i00012345/rue-de-lappe",
+        "text": "Lieu de bals ouvriers, chansons populaires. Gentrifiée dans les années 90, ambiance commerciale."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3712,
+          48.8536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "La Villette – Abattoirs",
+        "category": "industriel",
+        "audio": "https://www.ina.fr/ina-eclaire-actu/video/i00067890/les-abattoirs-de-la-villette",
+        "text": "Cris d’animaux, outils, travail manuel. Fermés dans les années 70, remplacés par un parc culturel."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3946,
+          48.8908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Montreuil – Rue des marchés",
+        "category": "migrant",
+        "audio": "https://www.ina.fr/ina-eclaire-actu/video/i00023456/montreuil-rue-des-marches",
+        "text": "Rue vibrant de musiques africaines, vie de quartier. Gentrification, espace apaisé."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4433,
+          48.8608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Quartier Latin – Paris 5e",
+        "category": "ouvrier",
+        "audio": "https://www.youtube.com/watch?v=8P27eAradPM",
+        "text": "Années 60–70, slogans, manifs étudiantes. Aujourd’hui, quartier calme dominé par le tourisme."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3469,
+          48.8462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gare du Nord – Souterrains",
+        "category": "migrant",
+        "audio": "https://soundlandscapes.wordpress.com/2018/09/10/the-changing-soundscape-of-the-gare-du-nord/",
+        "text": "Voix, musiques de passage, présences précaires. Rénovations, vidéosurveillance, espace sonore asséché."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3553,
+          48.8809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ivry – Quartiers ouvriers",
+        "category": "ouvrier",
+        "audio": "https://www.youtube.com/watch?v=yxjobGrmVDg",
+        "text": "Cité rouge, histoire militante, solidarités. Transformations immobilières, mémoire sonore diluée."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3887,
+          48.805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Pantin – Grands Moulins",
+        "category": "industriel",
+        "audio": "https://www.youtube.com/watch?v=6_pv9WxZGx8",
+        "text": "Machines jour et nuit, ville industrielle. Bureaux aujourd’hui, quartier devenu silencieux."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4053,
+          48.8944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gennevilliers – Port industriel",
+        "category": "industriel",
+        "audio": "https://www.youtube.com/watch?v=lyBfiD6DmtI",
+        "text": "Port actif, camions, grues. Réorganisé pour logistique moderne, environnement largement automatisé."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2851,
+          48.9384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Orly – ZAC sud",
+        "category": "colonial",
+        "audio": "https://www.youtube.com/watch?v=cBOOvT0_3Sc",
+        "text": "Zone de luttes écologistes. Sécurisation croissante, urbanisme aérien effaçant les sons contestataires."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3795,
+          48.7371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Saint-Ouen – Marché aux Puces",
+        "category": "migrant",
+        "audio": "https://www.youtube.com/watch?v=hw0Lj1Lo1Lo",
+        "text": "Marché vivant, voix, négociations. Réaménagements, ambiance populaire remplacée par lissage touristique."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3331,
+          48.9052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Place des Fêtes – Paris 19e",
+        "category": "ouvrier",
+        "audio": "https://www.youtube.com/watch?v=-X1Y3VXrxKM",
+        "text": "Fêtes de quartier, musiques, mixités sonores. Rénovée, la place est aujourd’hui plus calme."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3972,
+          48.8805
+        ]
+      }
+    }
+  ]
+}
