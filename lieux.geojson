@@ -3,37 +3,41 @@
   "features": [
     {
       "type": "Feature",
-      "geometry": {"type": "Point", "coordinates": [2.23, 48.91]},
+      "geometry": { "type": "Point", "coordinates": [2.23, 48.91] },
       "properties": {
-        "title": "Bidonville de Nanterre",
-        "audio": "https://drive.google.com/file/d/1v2Wri_P0bsAe9IeEa0CICzbKelnm-l2a/view?usp=drive_link",
-        "text": "Ensemble de bidonvilles dans  lequel vivaient plus de 10 mille personnes venues majoritairement d'Algérie, mais aussi du Maroc et du Portugal"
+        "title": "Nanterre – Bidonville algérien",
+        "typologie": "Bidonville",
+        "periode": "1950-1970",
+        "cause": "Urbanisme hygiéniste, politique migratoire",
+        "etat": "Logements sociaux",
+        "audio": "audio/Bidonville Nanterre.m4a",
+        "text": "Dans les années 50 à 70, ce bidonville accueille des milliers d’Algériens venus travailler en France. Il incarne la marginalisation urbaine des migrants. Détruit par souci d’ordre et d’image, il laisse place à des logements sociaux qui ne portent aucune mémoire visible."
       }
     },
     {
       "type": "Feature",
-      "geometry": {"type": "Point", "coordinates": [2.51, 48.82]},
+      "geometry": { "type": "Point", "coordinates": [2.51, 48.82] },
       "properties": {
-        "title": "Bidonville de Champigny-sur-Marne",
+        "title": "Champigny-sur-Marne – Bidonville portugais",
         "typologie": "Bidonville",
         "periode": "1960-1975",
         "cause": "Intégration urbaine, hygiène",
         "etat": "Quartier pavillonnaire",
-        "audio": "https://drive.google.com/file/d/1pu2XRF-BCjBq9dKqynFNsWSBUVrVPZvW/view?usp=sharing",
-        "text": "Le bidonville de Champigny-sur-Marne, qui a atteint jusqu'à 15 000 habitants dans les années 1960, était le plus grand de France, principalement habité par des immigrés portugais fuyant la misère et la dictature. "
+        "audio": "audio/Bidonville Champigny-sur-Marne.m4a",
+        "text": "Ce vaste bidonville, habité par des migrants portugais dans les années 60, illustre l’informalité du logement ouvrier. Sa destruction visait à faire disparaître un symbole de pauvreté. Aujourd’hui, le quartier est résidentiel et n’évoque plus cette histoire."
       }
     },
     {
       "type": "Feature",
-      "geometry": {"type": "Point", "coordinates": [2.24, 48.83]},
+      "geometry": { "type": "Point", "coordinates": [2.24, 48.83] },
       "properties": {
-        "title": "Usines Renault",
+        "title": "Boulogne-Billancourt – Usines Renault",
         "typologie": "Site industriel",
         "periode": "1930-1992",
-        "cause": "Désindustrialisation",
-        "etat": "Quartiers tertiaires et résidentiels",
-        "audio": "https://drive.google.com/file/d/1WzGebk8NE7g4jxsN9KjEbbzVe48w6Pnn/view?usp=sharing",
-        "text": "L'usine Renault de Billancourt a été un symbole de l’implantation du communisme en milieu ouvrier. Elle est le théâtre de nombreux événements importants dans l'histoire sociale et politique de la France, notamment les grèves de 1936 et de Mai 1968."
+        "cause": "Désindustrialisation, tertiarisation",
+        "etat": "Quartiers d’affaires",
+        "audio": "audio/Usines Renault.m4a",
+        "text": "Lieu emblématique du travail ouvrier et de la production automobile, les usines Renault structuraient la ville et ses habitants. Fermées dans les années 90, elles sont remplacées par des immeubles tertiaires, effaçant l'identité ouvrière du site."
       }
     }
   ]
