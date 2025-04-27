@@ -78,3 +78,8 @@ body {
   font-size: 20px;
   font-weight: 400;
 }
+/* fleche
+.leaflet-interactive {
+  cursor: url('assets/cursor-audio.png') 16 16, pointer;
+}
+
