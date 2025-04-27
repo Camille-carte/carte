@@ -1,15 +1,16 @@
-// Initialisation de la carte
+// Initialiser la carte
 var map = L.map('map', {
+  zoomControl: false,
   minZoom: 11,
   maxZoom: 16
 }).setView([48.8566, 2.3522], 12);
 
-// Fond de carte sombre, style blueprint
+// Fond de carte vectoriel sans labels
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
   attribution: '&copy; OpenStreetMap & CartoDB'
 }).addTo(map);
 
-// Limiter le déplacement hors Grand Paris
+// Limiter la carte au Grand Paris
 map.setMaxBounds([
   [48.5, 1.8],
   [49.2, 3.4]
@@ -19,7 +20,7 @@ var allMarkers = [];
 var layerGroup = L.layerGroup().addTo(map);
 var currentAudio = null;
 
-// Charger le GeoJSON
+// Charger les données GeoJSON
 fetch('data/lieux.geojson')
   .then(response => response.json())
   .then(data => {
@@ -32,10 +33,7 @@ fetch('data/lieux.geojson')
         fillOpacity: 1
       });
       marker.on('click', function() {
-        if (currentAudio) {
-          currentAudio.pause();
-          currentAudio = null;
-        }
+        if (currentAudio) { currentAudio.pause(); currentAudio = null; }
         if (props.audio) {
           currentAudio = new Audio(props.audio);
           currentAudio.play();
@@ -50,31 +48,25 @@ fetch('data/lieux.geojson')
     createFilters();
   });
 
-// Créer les filtres croiser
+// Créer les filtres par période
 function createFilters() {
-  document.getElementById('apply').onclick = function() {
-    var typologie = document.getElementById('typologie').value.toLowerCase();
-    var periode = document.getElementById('periode').value.toLowerCase();
-    var cause = document.getElementById('cause').value.toLowerCase();
-    var etat = document.getElementById('etat').value.toLowerCase();
-
-    layerGroup.clearLayers();
-    allMarkers.forEach(marker => {
-      var match = true;
-      if (typologie && !marker.feature.typologie.toLowerCase().includes(typologie)) match = false;
-      if (periode && !marker.feature.periode.toLowerCase().includes(periode)) match = false;
-      if (cause && !marker.feature.cause.toLowerCase().includes(cause)) match = false;
-      if (etat && !marker.feature.etat.toLowerCase().includes(etat)) match = false;
-      if (match) marker.addTo(layerGroup);
+  var checkboxes = document.querySelectorAll('#filters-panel input[type=checkbox]');
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      applyFilters();
     });
-  };
+  });
+}
 
-  document.getElementById('reset').onclick = function() {
-    layerGroup.clearLayers();
-    allMarkers.forEach(marker => marker.addTo(layerGroup));
-    document.getElementById('typologie').value = '';
-    document.getElementById('periode').value = '';
-    document.getElementById('cause').value = '';
-    document.getElementById('etat').value = '';
-  };
+// Appliquer les filtres
+function applyFilters() {
+  var selected = Array.from(document.querySelectorAll('#filters-panel input[type=checkbox]:checked'))
+    .map(cb => cb.value);
+  layerGroup.clearLayers();
+  allMarkers.forEach(marker => {
+    var period = marker.feature.periode;
+    if (selected.length === 0 || selected.some(sel => period.includes(sel))) {
+      marker.addTo(layerGroup);
+    }
+  });
 }
