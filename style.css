@@ -33,7 +33,6 @@ body, html {
   width: 1000px;
   height: 600px;
   background: #000000; /* Fond de la carte noir */
-  filter: brightness(0.6) invert(1);
 }
 
 #info-panel {
