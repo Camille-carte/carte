@@ -31,9 +31,10 @@ body {
   flex: 1; /* Toute la place restante */
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 40px;
+  height: 600px;
 }
 
 /* Carte */
@@ -63,6 +64,7 @@ body {
 #info-text p {
   font-size: 12px;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* Titre en bas à droite */
