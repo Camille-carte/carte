@@ -71,7 +71,7 @@ body {
 #page-title {
   position: absolute;
   bottom: 20px;
-  right: 30px;
+  left: 30px;
   color: white;
   font-size: 20px;
   font-weight: 400;
