@@ -44,12 +44,12 @@ body {
   background: #000;
   filter: brightness(1.1);
   border-radius: 0; /* pas d'arrondi */
-  margin-left: -180px;
+  margin-left: -150px;
 }
 
 /* Infos des lieux */
 #info-panel {
-  width: 180px;
+  width: 200px;
   color: white;
   text-align: left;
   flex-direction: column;
