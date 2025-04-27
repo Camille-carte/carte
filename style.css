@@ -48,7 +48,7 @@ body {
 
 /* Infos des lieux */
 #info-panel {
-  width: 400px;
+  width: 200px;
   color: white;
   text-align: left;
   flex-direction: column;
