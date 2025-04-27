@@ -49,7 +49,7 @@ body {
 
 /* Infos des lieux */
 #info-panel {
-  width: 100px;
+  width: 180px;
   color: white;
   text-align: left;
   flex-direction: column;
