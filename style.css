@@ -63,8 +63,8 @@ body {
 }
 
 #info-text p {
-  width: 225px;
-  font-size: 12px;
+  width: 200px;
+  font-size: 10px;
   line-height: 1.6;
   text-align: justify;
 }
