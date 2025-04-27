@@ -8,7 +8,6 @@ var map = L.map('map', {
 
 // Fond de carte vectoriel sans labels
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap & CartoDB'
 }).addTo(map);
 
 const introText = `
@@ -31,7 +30,7 @@ var allMarkers = [];
 var layerGroup = L.layerGroup().addTo(map);
 var currentAudio = null;
 
-// Charger les données GeoJSON
+// Charger les données des lieux
 fetch('data/lieux.geojson')
   .then(response => response.json())
   .then(data => {
@@ -44,20 +43,19 @@ fetch('data/lieux.geojson')
         fillOpacity: 1
       });
       marker.on('click', function() {
-        if (currentAudio) { currentAudio.pause(); currentAudio = null; }
         if (props.audio) {
-          currentAudio = new Audio(props.audio);
-          currentAudio.play();
+          var audio = new Audio(props.audio);
+          audio.play();
         }
-        document.getElementById('info-text').innerHTML = `<h3>${props.title}</h3><p>${props.text}</p>`;
+        document.getElementById('info-text').innerHTML = `
+          <h3>${props.title}</h3>
+          <p>${props.text}</p>
+        `;
       });
-      marker.feature = props;
-      marker.addTo(layerGroup);
-      allMarkers.push(marker);
+      marker.addTo(map);
     });
-
-    createFilters();
   });
+
 
 // Créer les filtres par période
 function createFilters() {
@@ -83,13 +81,10 @@ function applyFilters() {
     }
   });
 
-  // Attendre que tout soit chargé
-  <div id="page-title">ce qu’on n’entend plus</div>
+ // Quand tout est chargé, activer le clic sur le titre
 window.onload = function() {
   document.getElementById('page-title').addEventListener('click', function() {
     document.getElementById('info-text').innerHTML = introText;
   });
 };
 
-
-}
