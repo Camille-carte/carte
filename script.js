@@ -6,9 +6,10 @@ var map = L.map('map', {
 }).setView([48.8566, 2.3522], 12);
 
 // Fond de carte vectoriel sans labels
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap & CartoDB'
 }).addTo(map);
+
 
 
 // Limiter la carte au Grand Paris
