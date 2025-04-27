@@ -42,7 +42,7 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [48.9214408,2.4203814] },
+      "geometry": { "type": "Point", "coordinates": [2.4203814,48.9214408] },
       "properties": {
         "title": "Cité Gagarine",
         "typologie": "HLM",
