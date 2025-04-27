@@ -24,7 +24,7 @@ body {
   flex: 0 0 200px; /* Largeur fixe */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 #map-and-info {
@@ -33,7 +33,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 /* Carte */
