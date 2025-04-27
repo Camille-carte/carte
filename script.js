@@ -79,10 +79,17 @@ function applyFilters() {
     if (selected.length === 0 || selected.some(sel => period.includes(sel))) {
       marker.addTo(layerGroup);
 
-      // 6. Ajouter l'événement sur le titre pour reset
-document.getElementById('page-title').addEventListener('click', function() {
-  document.getElementById('info-text').innerHTML = introText;
 });
     }
   });
+
+  // Attendre que tout soit chargé
+  <div id="page-title">ce qu’on n’entend plus</div>
+window.onload = function() {
+  document.getElementById('page-title').addEventListener('click', function() {
+    document.getElementById('info-text').innerHTML = introText;
+  });
+};
+
+
 }
