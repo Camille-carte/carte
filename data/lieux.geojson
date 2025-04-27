@@ -5,52 +5,52 @@
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [2.23, 48.91] },
       "properties": {
-        "title": "Nanterre – Bidonville algérien",
+        "title": "Bidonville de Nanterre",
         "typologie": "Bidonville",
         "periode": "1950-1970",
         "cause": "Urbanisme hygiéniste, politique migratoire",
         "etat": "Logements sociaux",
         "audio": "audio/Bidonville Nanterre.m4a",
-        "text": "Dans les années 50 à 70, ce bidonville accueille des milliers d’Algériens venus travailler en France. Détruit pour des raisons d'image et de salubrité, il a été remplacé par des logements sociaux."
+        "text": "Ensemble de bidonvilles dans  lequel vivaient plus de 10 mille personnes venues majoritairement d'Algérie, mais aussi du Maroc et du Portugal"
       }
     },
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [2.51, 48.82] },
       "properties": {
-        "title": "Champigny-sur-Marne – Bidonville portugais",
+        "title": "Bidonville de Champigny-sur-Marne",
         "typologie": "Bidonville",
         "periode": "1960-1975",
         "cause": "Hygiène et intégration urbaine",
         "etat": "Quartier pavillonnaire",
         "audio": "audio/Bidonville Champigny-sur-Marne.m4a",
-        "text": "Dans les années 60, des migrants portugais vivent dans des conditions précaires. Le bidonville est démantelé progressivement, remplacé par des pavillons résidentiels."
+        "text": "Le bidonville de Champigny-sur-Marne, qui a atteint jusqu'à 15 000 habitants dans les années 1960, était le plus grand de France, principalement habité par des immigrés portugais fuyant la misère et la dictature. "
       }
     },
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [2.24, 48.83] },
       "properties": {
-        "title": "Boulogne-Billancourt – Usines Renault",
+        "title": "Usines Renault",
         "typologie": "Site industriel",
         "periode": "1930-1992",
         "cause": "Désindustrialisation",
         "etat": "Quartier d’affaires",
         "audio": "audio/Usines Renault.m4a",
-        "text": "Symbole de l’industrie ouvrière française, les usines Renault ferment dans les années 90. Le site est transformé en bureaux modernes et quartiers d'affaires."
+        "text": "L'usine Renault de Billancourt a été un symbole de l’implantation du communisme en milieu ouvrier. Elle est le théâtre de nombreux événements importants dans l'histoire sociale et politique de la France, notamment les grèves de 1936 et de Mai 1968."
       }
     },
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [2.37, 48.90] },
       "properties": {
-        "title": "Saint-Denis – Marché aux Puces originel",
-        "typologie": "Marché populaire",
-        "periode": "1900-2000",
-        "cause": "Gentrification, urbanisme",
-        "etat": "Marché rénové et zones commerciales",
-        "audio": "audio/Marche Puces.m4a",
-        "text": "Véritable lieu populaire et bruyant, le marché aux Puces s'est peu à peu gentrifié. Aujourd'hui, il reste un attrait touristique mais a perdu beaucoup de son ambiance populaire initiale."
+        "title": "Cité Gagarine",
+        "typologie": "HLM",
+        "periode": "1963–2020",
+        "cause": "rénovation urbaine",
+        "etat": "ecoquartier",
+        "audio": "audio/gagarine.m4a",
+        "text": "Une cité résidentielle d'HLM située à Ivry-sur-Seine de 380 logements."
       }
     }
   ]
