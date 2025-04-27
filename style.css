@@ -9,12 +9,13 @@ body, html {
 
 #filters-panel {
   position: absolute;
-  top: 20px;
+  top: 100px; /* au lieu de 20px */
   left: 20px;
   color: white;
   font-size: 16px;
   z-index: 1000;
 }
+
 
 #filters-panel label {
   display: block;
@@ -31,12 +32,13 @@ body, html {
 }
 
 #map {
-  width: 1200px;
-  height: 700px;
+  width: 1000px; /* au lieu de 1200px */
+  height: 600px; /* au lieu de 700px */
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   filter: hue-rotate(190deg) brightness(0.5) saturate(1.5);
 }
+
 
 #info-panel {
   margin-top: 10px;
