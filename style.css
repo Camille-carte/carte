@@ -44,7 +44,7 @@ body {
   background: #000;
   filter: brightness(1.1);
   border-radius: 0; /* pas d'arrondi */
-  margin-left: -200px;
+  margin-left: -180px;
 }
 
 /* Infos des lieux */
