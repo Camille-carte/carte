@@ -11,7 +11,7 @@
         "cause": "Urbanisme hygiéniste, politique migratoire",
         "etat": "Logements sociaux",
         "audio": "audio/Bidonville Nanterre.m4a",
-        "text": "Ensemble de bidonvilles dans  lequel vivaient plus de 10 mille personnes venues majoritairement d'Algérie, mais aussi du Maroc et du Portugal"
+        "text": "Ensemble de bidonvilles dans  lequel vivaient plus de 10 mille personnes venues majoritairement d'Algérie, mais aussi du Maroc et du Portugal. Dans une optique de contrôle de la population, les bidonvilles sont détruits et les habitants délogés de force vers des cités de transit."
       }
     },
     {
@@ -24,7 +24,7 @@
         "cause": "Hygiène et intégration urbaine",
         "etat": "Quartier pavillonnaire",
         "audio": "audio/Bidonville Champigny-sur-Marne.m4a",
-        "text": "Le bidonville de Champigny-sur-Marne, qui a atteint jusqu'à 15 000 habitants dans les années 1960, était le plus grand de France, principalement habité par des immigrés portugais fuyant la misère et la dictature. "
+        "text": "Le bidonville de Champigny-sur-Marne, qui a atteint jusqu'à 15 000 habitants dans les années 1960, était le plus grand de France, principalement habité par des immigrés portugais fuyant la misère et la dictature.Detruit dans le cadre d'une politique de résorption de l'habitat insalubre."
       }
     },
     {
@@ -37,12 +37,12 @@
         "cause": "Désindustrialisation",
         "etat": "Quartier d’affaires",
         "audio": "audio/Usines Renault.m4a",
-        "text": "L'usine Renault de Billancourt a été un symbole de l’implantation du communisme en milieu ouvrier. Elle est le théâtre de nombreux événements importants dans l'histoire sociale et politique de la France, notamment les grèves de 1936 et de Mai 1968."
+        "text": "L'usine Renault de Billancourt a été un symbole de l’implantation du communisme en milieu ouvrier. Elle est le théâtre de nombreux événements importants dans l'histoire sociale et politique de la France, notamment les grèves de 1936 et de Mai 1968. Fermé en raison de la réduction de la production automobile en France"
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.37, 48.90] },
+      "geometry": { "type": "Point", "coordinates": [48.9214408,2.4203814] },
       "properties": {
         "title": "Cité Gagarine",
         "typologie": "HLM",
@@ -50,7 +50,7 @@
         "cause": "rénovation urbaine",
         "etat": "ecoquartier",
         "audio": "audio/gagarine.m4a",
-        "text": "Une cité résidentielle d'HLM située à Ivry-sur-Seine de 380 logements."
+        "text": "Une cité résidentielle d'HLM située à Ivry-sur-Seine de 380 logements. Démolie et remplacée par le projet de nouveau quartier Gagarine-Truillot."
       }
     }
   ]
