@@ -63,3 +63,59 @@ body, html {
 .leaflet-control-zoom {
   display: none; /* Retirer boutons + - */
 }
+#main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 40px;
+}
+
+#filters-panel {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#map-and-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+#map {
+  width: 1000px;
+  height: 600px;
+  background: #000000;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  filter: brightness(1.1);
+}
+
+#info-panel {
+  width: 400px;
+  color: white;
+  text-align: left;
+}
+
+#info-text h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#info-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#page-title {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
