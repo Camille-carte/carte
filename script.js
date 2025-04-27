@@ -92,8 +92,8 @@ function applyFilters() {
   });
 }
 
-// Ajouter un événement pour reset sur le titre
+// Activer le reset en cliquant sur le titre
 document.getElementById('page-title').addEventListener('click', function() {
   document.getElementById('info-text').innerHTML = introText;
 });
-};
+
