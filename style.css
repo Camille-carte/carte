@@ -1,89 +1,63 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
-  background-color: #002b45;
-  font-family: 'Inter', sans-serif;
-}
-
-#main-container {
-  display: flex;
-  flex-direction: row;
   height: 100%;
-  width: 100%;
+  background-color: #011627; /* bleu très foncé */
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 #filters-panel {
-  width: 250px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  box-sizing: border-box;
+  position: absolute;
+  top: 20px;
+  left: 20px;
   color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  font-size: 16px;
+  z-index: 1000;
 }
 
-#filters-panel h2 {
-  font-weight: 400;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-#filters-panel input {
-  padding: 8px;
-  background: rgba(255,255,255,0.1);
-  border: none;
-  color: white;
-  font-size: 14px;
-}
-
-#filters-panel button {
-  padding: 10px;
-  margin-top: 5px;
-  border: none;
-  background-color: #1e90ff;
-  color: white;
-  font-weight: 600;
+#filters-panel label {
+  display: block;
+  margin-bottom: 8px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-#filters-panel button:hover {
-  background-color: #63b3ed;
 }
 
 #map-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  height: 100%;
 }
 
 #map {
-  height: 600px;
-  width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  filter: hue-rotate(190deg) brightness(0.6) saturate(2);
+  width: 1200px;
+  height: 700px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  filter: hue-rotate(190deg) brightness(0.5) saturate(1.5);
 }
 
 #info-panel {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 10px;
   color: white;
-}
-
-#info-panel h1 {
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  text-align: center;
 }
 
 #info-text {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#page-title {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.leaflet-control-zoom {
+  display: none; /* Supprimer le + et - */
 }
