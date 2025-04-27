@@ -93,8 +93,7 @@ function applyFilters() {
 }
 
 // Ajouter un événement pour reset sur le titre
-window.onload = function() {
-  document.getElementById('page-title').addEventListener('click', function() {
-    document.getElementById('info-text').innerHTML = introText;
-  });
+document.getElementById('page-title').addEventListener('click', function() {
+  document.getElementById('info-text').innerHTML = introText;
+});
 };
