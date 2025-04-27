@@ -12,7 +12,7 @@ body {
 #main-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   height: 90vh;
   gap: 40px;
@@ -24,7 +24,6 @@ body {
   flex: 0 0 200px; /* Largeur fixe */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
 }
 
@@ -44,7 +43,7 @@ body {
   background: #000;
   filter: brightness(1.1);
   border-radius: 0; /* pas d'arrondi */
-  margin-left: -200px;
+  margin-left: -150px;
 }
 
 /* Infos des lieux */
