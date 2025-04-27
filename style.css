@@ -13,25 +13,26 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 90vh;
   gap: 40px;
   padding: 40px;
 }
 
-/* Filtres */
+
 #filters-panel {
+  flex: 0 0 200px; /* Largeur fixe */
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 16px;
 }
 
-/* Bloc carte + info */
 #map-and-info {
+  flex: 1; /* Toute la place restante */
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 
