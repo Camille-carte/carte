@@ -38,14 +38,19 @@ body, html {
 }
 
 #info-panel {
-  margin-top: 10px;
+  margin-top: 400px;
   color: white;
-  text-align: center;
+  text-align: left;
 }
 
-#info-text {
-  font-size: 18px;
-  font-weight: 400;
+#info-text h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#info-text p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 #page-title {
