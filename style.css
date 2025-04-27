@@ -67,7 +67,7 @@ body {
   text-align: justify;
 }
 
-/* Titre en bas à droite */
+/* Titre en bas à gauche */
 #page-title {
   position: absolute;
   bottom: 20px;
