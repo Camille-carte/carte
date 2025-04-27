@@ -2,44 +2,53 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>ce qu'on n'entend plus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-</head>
-<body>
-  <div id="filters-panel">
-    <label><input type="checkbox" value="1950-1970"> 1950-1970</label><br>
-    <label><input type="checkbox" value="1971-1990"> 1971-1990</label><br>
-    <label><input type="checkbox" value="1991-2010"> 1991-2010</label><br>
-    <label><input type="checkbox" value="2011-2025"> 2011-2025</label>
-  </div>
+  <title>ce qu'on n'entend plus</title>
 
- <div id="map-and-info">
-  <div id="map"></div>
-  <div id="info-panel">
-    <div id="info-text"></div>
-  </div>
-</div>
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+  <!-- Police Space Grotesk -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
 
   <div id="main-content">
-  <div id="filters-panel">
-    <!-- filtres ici -->
-  </div>
-
-  <div id="map-and-info">
-    <div id="map"></div>
-    <div id="info-panel">
-      <div id="info-text"></div>
+    
+    <!-- Filtres -->
+    <div id="filters-panel">
+      <label><input type="checkbox" id="filter-1950-1970" checked> 1950-1970</label>
+      <label><input type="checkbox" id="filter-1971-1990" checked> 1971-1990</label>
+      <label><input type="checkbox" id="filter-1991-2010" checked> 1991-2010</label>
+      <label><input type="checkbox" id="filter-2011-2025" checked> 2011-2025</label>
     </div>
+
+    <!-- Carte + Infos -->
+    <div id="map-and-info">
+      <div id="map"></div>
+
+      <div id="info-panel">
+        <div id="info-text">
+          <!-- Les infos du lieu s'affichent ici -->
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
 
-<div id="page-title">ce qu'on n'entend plus</div>
+  <!-- Titre en bas -->
+  <div id="page-title">ce qu’on n’entend plus</div>
 
-
+  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+  <!-- Script principal -->
   <script src="script.js"></script>
+
 </body>
 </html>
