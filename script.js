@@ -17,8 +17,12 @@ Le silence qui les remplace s’inscrit dans l’avènement d’un idéal urbain
 Cette cartographie n’est pas figée. Elle est pensée comme un support évolutif, susceptible d’être enrichi au fil du temps par d’autres sons effacés, d’autres récits, d’autres lieux. Elle invite à poursuivre l’enquête, à écouter autrement, à documenter ce qui disparaît encore.</p>
 `;
 
-// 4. Afficher le texte d'intro au démarrage
+
+// Afficher le texte d'intro au début
 document.getElementById('info-text').innerHTML = introText;
+
+var allMarkers = [];
+var layerGroup = L.layerGroup().addTo(map);
 
 // Limiter la carte au Grand Paris
 map.setMaxBounds([
@@ -42,6 +46,7 @@ fetch('data/lieux.geojson')
         fillColor: 'white',
         fillOpacity: 1
       });
+      
       marker.on('click', function() {
         if (props.audio) {
           var audio = new Audio(props.audio);
@@ -52,12 +57,17 @@ fetch('data/lieux.geojson')
           <p>${props.text}</p>
         `;
       });
-      marker.addTo(map);
+      
+      marker.feature = props; // Stocke les propriétés pour le filtrage
+      marker.addTo(layerGroup);
+      allMarkers.push(marker);
     });
+
+    createFilters();
   });
 
 
-// Créer les filtres par période
+// Créer les filtres
 function createFilters() {
   var checkboxes = document.querySelectorAll('#filters-panel input[type=checkbox]');
   checkboxes.forEach(cb => {
@@ -70,21 +80,21 @@ function createFilters() {
 // Appliquer les filtres
 function applyFilters() {
   var selected = Array.from(document.querySelectorAll('#filters-panel input[type=checkbox]:checked'))
-    .map(cb => cb.value);
-  layerGroup.clearLayers();
-  allMarkers.forEach(marker => {
-    var period = marker.feature.periode;
-    if (selected.length === 0 || selected.some(sel => period.includes(sel))) {
-      marker.addTo(layerGroup);
+    .map(cb => cb.id.replace('filter-', '')); // Récupère les périodes cochées
 
-});
+  layerGroup.clearLayers();
+
+  allMarkers.forEach(marker => {
+    var periode = marker.feature.periode;
+    if (selected.length === 0 || selected.some(sel => periode.includes(sel))) {
+      marker.addTo(layerGroup);
     }
   });
+}
 
- // Quand tout est chargé, activer le clic sur le titre
+// Ajouter un événement pour reset sur le titre
 window.onload = function() {
   document.getElementById('page-title').addEventListener('click', function() {
     document.getElementById('info-text').innerHTML = introText;
   });
 };
-
