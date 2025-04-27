@@ -24,6 +24,7 @@ body {
   flex: 0 0 200px; /* Largeur fixe */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 
