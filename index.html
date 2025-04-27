@@ -4,34 +4,27 @@
   <meta charset="UTF-8">
   <title>Ce qu'on n'entend plus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 </head>
 <body>
+  <div id="filters-panel">
+    <label><input type="checkbox" value="1950-1970"> 1950-1970</label><br>
+    <label><input type="checkbox" value="1971-1990"> 1971-1990</label><br>
+    <label><input type="checkbox" value="1991-2010"> 1991-2010</label><br>
+    <label><input type="checkbox" value="2011-2025"> 2011-2025</label>
+  </div>
 
-  <div id="main-container">
-    <div id="filters-panel">
-      <h2>Filtres</h2>
-      <input id="typologie" type="text" placeholder="Typologie">
-      <input id="periode" type="text" placeholder="Période">
-      <input id="cause" type="text" placeholder="Cause">
-      <input id="etat" type="text" placeholder="Devenu">
-      <button id="apply">Appliquer</button>
-      <button id="reset">Reset</button>
+  <div id="map-container">
+    <div id="map"></div>
+    <div id="info-panel">
+      <div id="info-text"></div>
     </div>
-
-    <div id="map-container">
-      <div id="map"></div>
-      <div id="info-panel">
-        <h1>Ce qu'on n'entend plus</h1>
-        <div id="info-text"></div>
-      </div>
-    </div>
+    <div id="page-title">Ce qu'on n'entend plus</div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
