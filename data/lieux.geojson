@@ -29,7 +29,7 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.14, 48.4926 },
+      "geometry": { "type": "Point", "coordinates": [2.14, 48.4926] },
       "properties": {
         "title": "Usines Renault",
         "typologie": "Site industriel",
