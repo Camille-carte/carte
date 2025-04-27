@@ -51,6 +51,7 @@ body {
   width: 400px;
   color: white;
   text-align: left;
+  align-items: flex-start;
 }
 
 #info-text h3 {
