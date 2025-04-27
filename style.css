@@ -22,19 +22,18 @@ body, html {
   cursor: pointer;
 }
 
-#map-container {
+#map-and-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  gap: 40px;
 }
 
 #map {
   width: 1000px;
   height: 600px;
   background: #000000; /* Fond de la carte noir */
-  /* Pas de border-radius ! Bord droit */
+  filter: brightness(0.6) invert(1);
 }
 
 #info-panel {
@@ -46,6 +45,11 @@ body, html {
 #info-text h3 {
   font-size: 22px;
   margin-bottom: 10px;
+}
+
+#info-text p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 #page-title {
