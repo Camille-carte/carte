@@ -48,11 +48,6 @@ body, html {
   margin-bottom: 10px;
 }
 
-#info-text p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
 #page-title {
   position: absolute;
   bottom: 20px;
