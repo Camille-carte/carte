@@ -1,68 +1,14 @@
-body, html {
+/* Fond général */
+body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000; /* Fond noir */
+  background-color: black;
+  color: white;
   font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
 }
 
-#filters-panel {
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  color: white;
-  font-size: 16px;
-  z-index: 1000;
-}
-
-#filters-panel label {
-  display: block;
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-#map-and-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-}
-
-#map {
-  width: 1000px;
-  height: 600px;
-  background: #000000; /* Fond de la carte noir */
-}
-
-#info-panel {
-  margin-top: 400px;
-  color: white;
-  text-align: left;
-}
-
-#info-text h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-#info-text p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-#page-title {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
-  color: white;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.leaflet-control-zoom {
-  display: none; /* Retirer boutons + - */
-}
+/* Conteneur principal */
 #main-content {
   display: flex;
   flex-direction: row;
@@ -70,15 +16,18 @@ body, html {
   justify-content: center;
   height: 90vh;
   gap: 40px;
+  padding: 40px;
 }
 
+/* Filtres */
 #filters-panel {
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-size: 16px;
 }
 
+/* Bloc carte + info */
 #map-and-info {
   display: flex;
   flex-direction: row;
@@ -86,14 +35,16 @@ body, html {
   gap: 40px;
 }
 
+/* Carte */
 #map {
   width: 1000px;
   height: 600px;
-  background: #000000;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  background: #000;
   filter: brightness(1.1);
+  border-radius: 0; /* pas d'arrondi */
 }
 
+/* Infos des lieux */
 #info-panel {
   width: 400px;
   color: white;
@@ -110,6 +61,7 @@ body, html {
   line-height: 1.6;
 }
 
+/* Titre en bas à droite */
 #page-title {
   position: absolute;
   bottom: 20px;
@@ -118,4 +70,3 @@ body, html {
   font-size: 20px;
   font-weight: 400;
 }
-
