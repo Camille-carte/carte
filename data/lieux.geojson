@@ -75,7 +75,7 @@
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [2.356182813644409,48.86033248901367] },
       "properties": {
-        "title": "Îlot insalubres n1",
+        "title": "Halles de Paris",
         "typologie": "Commerce",
         "periode": "1851-1973",
         "cause": "rénovation urbaine",
