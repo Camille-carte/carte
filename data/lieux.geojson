@@ -52,7 +52,7 @@
         "audio": "audio/gagarine.m4a",
         "text": "Une cité résidentielle d'HLM située à Ivry-sur-Seine de 380 logements. Démolie et remplacée par le projet de nouveau quartier Gagarine-Truillot."
       }
-    }
+    },
 {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [2.21,48.51] },
