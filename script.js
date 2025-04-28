@@ -80,29 +80,23 @@ function createFilters() {
 // Appliquer les filtres
 function applyFilters() {
   var selected = Array.from(document.querySelectorAll('#filters-panel input[type=checkbox]:checked'))
-  .map(cb => cb.id.replace('filter-', ''));
-
-layerGroup.clearLayers();
-
-allMarkers.forEach(marker => {
-  var typologie = marker.feature.typologie;
-  if (selected.length === 0 || selected.includes(typologie)) {
-    marker.addTo(layerGroup);
-  }
-});
+    .map(cb => cb.id.replace('filter-', '')); // Récupère les typologies cochées
 
   layerGroup.clearLayers();
 
   allMarkers.forEach(marker => {
-    var periode = marker.feature.periode;
-    if (selected.length === 0 || selected.some(sel => periode.includes(sel))) {
+    var typologie = marker.feature.typologie;
+    if (selected.length === 0 || selected.includes(typologie)) {
       marker.addTo(layerGroup);
     }
   });
 }
 
-// Activer le reset en cliquant sur le titre
+// Remettre le texte d'introduction quand on clique sur le titre
 document.getElementById('page-title').addEventListener('click', function() {
   document.getElementById('info-text').innerHTML = introText;
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
 });
-
