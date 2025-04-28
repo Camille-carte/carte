@@ -80,7 +80,16 @@ function createFilters() {
 // Appliquer les filtres
 function applyFilters() {
   var selected = Array.from(document.querySelectorAll('#filters-panel input[type=checkbox]:checked'))
-    .map(cb => cb.id.replace('filter-', '')); // Récupère les périodes cochées
+  .map(cb => cb.id.replace('filter-', ''));
+
+layerGroup.clearLayers();
+
+allMarkers.forEach(marker => {
+  var typologie = marker.feature.typologie;
+  if (selected.length === 0 || selected.includes(typologie)) {
+    marker.addTo(layerGroup);
+  }
+});
 
   layerGroup.clearLayers();
 
