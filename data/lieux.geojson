@@ -32,7 +32,7 @@
       "geometry": { "type": "Point", "coordinates": [2.2321323, 48.8245002] },
       "properties": {
         "title": "Usines Renault",
-        "typologie": "Site industriel",
+        "typologie": "Usine",
         "periode": "1930-1992",
         "cause": "Désindustrialisation",
         "etat": "Quartier d’affaires",
