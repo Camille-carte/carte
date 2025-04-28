@@ -15,6 +15,8 @@ const introText = `
 En sélectionnant des lieux précis, la carte explore la dimension politique du sonore : ce que l’on est autorisé à entendre, ce qui doit être tu, ce qui devient inaudible. Chaque point de la carte donne accès à un extrait sonore accompagné d’un texte bref, contextualisant la disparition, les logiques à l’œuvre, et la situation actuelle du lieu. Ces fragments doivent être entendus non comme des objets de nostalgie, mais comme des traces, comme un vecteur de mémoire, d’existence sociale.
 Le silence qui les remplace s’inscrit dans l’avènement d’un idéal urbain pacifié, une ville contrôlée, propre, tranquille, qui exclut ce qui déborde, dérange.
 Cette cartographie n’est pas figée. Elle est pensée comme un support évolutif, susceptible d’être enrichi au fil du temps par d’autres sons effacés, d’autres récits, d’autres lieux. Elle invite à poursuivre l’enquête, à écouter autrement, à documenter ce qui disparaît encore.
+
+
 Appuyer sur les ronds pour activer le son.</p>
 `;
 
