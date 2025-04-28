@@ -55,7 +55,7 @@
     },
 {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.21,48.51] },
+      "geometry": { "type": "Point", "coordinates": [2.352411,48.860653] },
       "properties": {
         "title": "Îlot insalubres n1 - Centre Pompidou",
         "typologie": "bidonville",
