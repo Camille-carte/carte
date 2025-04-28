@@ -2,55 +2,39 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sons disparus</title>
-
-  <!-- Feuille de style -->
+  <title>Carte des lieux effacés - Camille</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-
-  <!-- Police Space Grotesk -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
 
-  <div id="main-content">
-    
-    <!-- Filtres -->
-    <div id="filters-panel">
-      <label><input type="checkbox" id="filter-1950-1970" checked> 1950-1970</label>
-      <label><input type="checkbox" id="filter-1971-1990" checked> 1971-1990</label>
-      <label><input type="checkbox" id="filter-1991-2010" checked> 1991-2010</label>
-      <label><input type="checkbox" id="filter-2011-2025" checked> 2011-2025</label>
-    </div>
+<header id="page-title">
+  <h1>Cartographie sonore du Grand Paris</h1>
+</header>
 
-    <!-- Carte + Infos -->
-    <div id="map-and-info">
-      <div id="map"></div>
-
-      <div id="info-panel">
-        <div id="info-text">
-          <!-- Les infos du lieu s'affichent ici -->
-        </div>
-      </div>
-    </div>
-
+<div id="main-content">
+  
+  <div id="filters-panel">
+    <label><input type="checkbox" id="filter-Bidonville"> Bidonville</label>
+    <label><input type="checkbox" id="filter-HLM"> HLM</label>
+    <label><input type="checkbox" id="filter-Usine"> Usine</label>
+    <label><input type="checkbox" id="filter-Commerce"> Commerce</label>
+    <label><input type="checkbox" id="filter-Circulation"> Circulation</label>
+    <label><input type="checkbox" id="filter-Friche"> Friche</label>
   </div>
 
-  <!-- Titre en bas -->
-  <div id="page-title">sons disparus</div>
+  <div id="map-and-info">
+    <div id="map"></div>
+    <div id="info-panel">
+      <div id="info-text"></div>
+    </div>
+  </div>
 
-  <div id="page-title">sons disparus</div>
+</div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-
-  <!-- Script principal -->
-  <script src="script.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
