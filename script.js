@@ -14,9 +14,10 @@ const introText = `
   <p>Cette carte propose une lecture du Grand Paris à travers les sons disparus entre 1959 et 2025. Elle s’intéresse aux paysages sonores effacés ou transformés, envisagés comme témoins des mutations sociales, politiques et spatiales. Ces sons ont peu à peu quitté l’espace urbain, emportés par des processus d’effacement volontaire, de reconfiguration spatiale ou de mise au silence normative. 
 En sélectionnant des lieux précis, la carte explore la dimension politique du sonore : ce que l’on est autorisé à entendre, ce qui doit être tu, ce qui devient inaudible. Chaque point de la carte donne accès à un extrait sonore accompagné d’un texte bref, contextualisant la disparition, les logiques à l’œuvre, et la situation actuelle du lieu. Ces fragments doivent être entendus non comme des objets de nostalgie, mais comme des traces, comme un vecteur de mémoire, d’existence sociale.
 Le silence qui les remplace s’inscrit dans l’avènement d’un idéal urbain pacifié, une ville contrôlée, propre, tranquille, qui exclut ce qui déborde, dérange.
-Cette cartographie n’est pas figée. Elle est pensée comme un support évolutif, susceptible d’être enrichi au fil du temps par d’autres sons effacés, d’autres récits, d’autres lieux. Elle invite à poursuivre l’enquête, à écouter autrement, à documenter ce qui disparaît encore.</p>
+Cette cartographie n’est pas figée. Elle est pensée comme un support évolutif, susceptible d’être enrichi au fil du temps par d’autres sons effacés, d’autres récits, d’autres lieux. Elle invite à poursuivre l’enquête, à écouter autrement, à documenter ce qui disparaît encore.
+Appuyer sur les ronds pour activer le son.</p>
 `;
-"smallText": "Appuyer sur les ronds pour activer le son"
+
 
 // Afficher le texte d'intro au début
 document.getElementById('info-text').innerHTML = introText;
