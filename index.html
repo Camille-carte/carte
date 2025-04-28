@@ -1,121 +1,42 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>sons disparus</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .filters {
-            padding: 10px;
-            background-color: #f9f9f9;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-        .filters button {
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 8px 12px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            border-radius: 4px;
-        }
-        .filters button:hover {
-            background-color: #eee;
-        }
-        #map {
-            height: calc(100vh - 60px);
-            width: 100%;
-        }
-    </style>
-</head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>sons disparus</title>
+    
+ <!-- Feuille de style -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Leaflet CSS -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <!-- Police Space Grotesk -->
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+   </head>
+    <body>
 
-<body>
-
-<div class="filters">
-    <button onclick="filterMarkers('Tous')">Tous</button>
-    <button onclick="filterMarkers('Bidonville')">Bidonville</button>
-    <button onclick="filterMarkers('HLM')">HLM</button>
-    <button onclick="filterMarkers('Usine')">Usine</button>
-    <button onclick="filterMarkers('Commerce')">Commerce</button>
-    <button onclick="filterMarkers('Circulation')">Circulation</button>
-    <button onclick="filterMarkers('Friche')">Friche</button>
-</div>
-
-<div id="map"></div>
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<script>
-// GeoJSON de tes lieux
-const geojsonData = {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.23, 48.91] },
-      "properties": {
-        "title": "Bidonville de Nanterre",
-        "typologie": "Bidonville",
-        "periode": "1950-1970",
-        "cause": "Urbanisme hygiéniste",
-        "etat": "Logements sociaux",
-        "audio": "audio/Bidonville Nanterre.m4a",
-        "text": "Ancien bidonville habité principalement par des Algériens."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.2321323, 48.8245002] },
-      "properties": {
-        "title": "Usines Renault",
-        "typologie": "Usine",
-        "periode": "1930-1992",
-        "cause": "Désindustrialisation",
-        "etat": "Quartier d’affaires",
-        "audio": "audio/Usines Renault.m4a",
-        "text": "Fermeture de l'usine Renault, symbole ouvrier de Boulogne-Billancourt."
-      }
-    }
-    // Ajoute ici tous tes lieux...
-  ]
-};
-
-const map = L.map('map').setView([48.8566, 2.3522], 11);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-let markers = [];
-
-function displayMarkers(filter) {
-  markers.forEach(marker => map.removeLayer(marker));
-  markers = [];
-
-  geojsonData.features.forEach(feature => {
-    if (filter === "Tous" || feature.properties.typologie === filter) {
-      const coords = feature.geometry.coordinates;
-      const props = feature.properties;
-      const marker = L.marker([coords[1], coords[0]])
-        .bindPopup(`<strong>${props.title}</strong><br>${props.text}<br><em>Typologie : ${props.typologie}</em>`);
-      marker.addTo(map);
-      markers.push(marker);
-    }
-  });
-}
-
-function filterMarkers(type) {
-  displayMarkers(type);
-}
-
-// Au début, afficher tout
-displayMarkers('Tous');
-
-</script>
-
-</body>
-</html>
+<div id="main-content">
+     
+     <!-- Filtres -->
+     <div id="filters-panel">
+       <label><input type="checkbox" id="filter-1950-1970" checked> 1950-1970</label>
+       <label><input type="checkbox" id="filter-1971-1990" checked> 1971-1990</label>
+       <label><input type="checkbox" id="filter-1991-2010" checked> 1991-2010</label>
+       <label><input type="checkbox" id="filter-2011-2025" checked> 2011-2025</label>
+     </div>
+ 
+     <!-- Carte + Infos -->
+     <div id="map-and-info">
+       <div id="map"></div>
+ 
+       <div id="info-panel">
+         <div id="info-text">
+           <!-- Les infos du lieu s'affichent ici -->
+         </div>
+       </div>
+     </div>
+ 
+   </div>
+ 
+   <!-- Titre en bas -->
+   <div id="page-title">sons disparus</div>
+    
