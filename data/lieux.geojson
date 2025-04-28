@@ -73,7 +73,7 @@
     },
 {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.2044,48.5144] },
+      "geometry": { "type": "Point", "coordinates": [2.356182813644409,48.86033248901367] },
       "properties": {
         "title": "Îlot insalubres n1",
         "typologie": "Commerce",
