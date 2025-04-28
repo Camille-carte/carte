@@ -55,7 +55,7 @@
     }
 {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.4203814,48.9214408] },
+      "geometry": { "type": "Point", "coordinates": [2.21,48.51] },
       "properties": {
         "title": "Îlot insalubres n1 - Centre Pompidou",
         "typologie": "bidonville",
@@ -65,6 +65,6 @@
         "audio": "beaubourg.m4a",
         "text": "Au XIXe siècle, le quartier de Beaubourg est très peuplé. Les habitants y vivent entassés dans des logements misérables. En 1930 l'ilot est démolie. Il reste un terrain vague pendant plus de 30ans . En 1971, un concours est lancé pour y construire un centre culturel et artistique."
       }
-    }
+    },
   ]
 }
