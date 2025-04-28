@@ -24,7 +24,7 @@ body {
   flex: 0 0 200px; /* Largeur fixe */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   font-size: 10px;
 }
 
@@ -76,7 +76,7 @@ body {
   bottom: 20px;
   left: 30px;
   color: white;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 400;
 }
 /* fleche
