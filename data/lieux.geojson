@@ -70,6 +70,20 @@
         "text": "Au XIXe siècle, le quartier de Beaubourg est très peuplé. Les habitants y vivent entassés dans des logements misérables. En 1930 l'ilot est démolie. Il reste un terrain vague pendant plus de 30ans . En 1971, un concours est lancé pour y construire un centre culturel et artistique, le Centre Pompidou.",
         "smallText": "INA : Le plateau de Beaubourg JT 20H - 19.07.1971"
       }
+    },
+{
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [2.352411,48.860653] },
+      "properties": {
+        "title": "Îlot insalubres n1",
+        "typologie": "Commerce",
+        "periode": "1851-1973",
+        "cause": "rénovation urbaine",
+        "etat": "hall",
+        "audio": "audio/hall.m4a",
+        "text": "Haut lieu de l'approvisionnement parisien pendant des siècles, les Halles étaient un marché vibrant et bruyant. Jugées insalubres et encombrées, elles sont démolies en 1969 pour être remplacées par le Forum des Halles.",
+        "smallText": "INA : Les halles de Paris deviennent le Forum des Halles - 01.04.1976"
+      }
     }
   ]
 }
