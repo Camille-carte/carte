@@ -55,7 +55,7 @@ fetch('data/lieux.geojson')
         document.getElementById('info-text').innerHTML = `
           <h3>${props.title}</h3>
           <p>${props.text}</p>
-          ${props.smallText ? `<p style="font-size: 12px; color: #bbb;">${props.smallText}</p>` : ''}
+          ${props.smallText ? `<p style="font-size: 8px; color: #bbb;">${props.smallText}</p>` : ''}
         `;
       });
       
