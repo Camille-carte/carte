@@ -53,8 +53,10 @@ fetch('data/lieux.geojson')
           audio.play();
         }
         document.getElementById('info-text').innerHTML = `
-          <h3>${props.title}</h3>
-          <p>${props.text}</p>
+document.getElementById('info-text').innerHTML = `
+  <h3>${props.title}</h3>
+  <p>${props.text}</p>
+  ${props.smallText ? `<p style="font-size: 12px; color: #bbb;">${props.smallText}</p>` : ''}
         `;
       });
       
