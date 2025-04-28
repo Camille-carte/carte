@@ -16,7 +16,7 @@ En sélectionnant des lieux précis, la carte explore la dimension politique du 
 Le silence qui les remplace s’inscrit dans l’avènement d’un idéal urbain pacifié, une ville contrôlée, propre, tranquille, qui exclut ce qui déborde, dérange.
 Cette cartographie n’est pas figée. Elle est pensée comme un support évolutif, susceptible d’être enrichi au fil du temps par d’autres sons effacés, d’autres récits, d’autres lieux. Elle invite à poursuivre l’enquête, à écouter autrement, à documenter ce qui disparaît encore.</p>
 `;
-"smallText": Appuyer sur les ronds pour activer le son
+"smallText": "Appuyer sur les ronds pour activer le son"
 
 // Afficher le texte d'intro au début
 document.getElementById('info-text').innerHTML = introText;
