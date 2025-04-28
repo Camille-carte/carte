@@ -73,7 +73,7 @@
     },
 {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [2.356182813644409,48.86033248901367] },
+      "geometry": { "type": "Point", "coordinates": [2.3460747965892637,48.86225248180951] },
       "properties": {
         "title": "Halles de Paris",
         "typologie": "Commerce",
